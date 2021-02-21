@@ -1,4 +1,5 @@
-﻿
+﻿using System.Windows.Forms;
+using System.Drawing;
 namespace Sleep_Calculator
 {
     partial class Form1
@@ -40,7 +41,7 @@ namespace Sleep_Calculator
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
-
+            
         }
 
         #endregion
