@@ -41,9 +41,29 @@ namespace Sleep_Calculator
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
-            
+            ListBox1 = new ListBox();
+            ListBox1.BackColor = Color.FromArgb(66, 82, 125);
+            ListBox1.Items.Add(ListBox1);
+            ListBox2 = new ListBox();
+            ListBox2.BackColor = Color.FromArgb(66, 82, 125);
+            ListBox2.Items.Add(ListBox2);
+            btn1 = new Button();
+            btn1.BackColor = Color.FromArgb(93, 115, 176);
+            btn1.Location = new Point(200, 0);
+            btn1.Text = "Рассчитать";
+            label1 = new Label();
+            label1.Text = "Время сна";
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(300, 0);
+            Label2 = new Label();
+            Label2.Text = "Хочу проснуться в . . .";
+            Label2.ForeColor = Color.White;
         }
-
+        ListBox ListBox1;
+        ListBox ListBox2;
+        Button btn1;
+        Label label1;
+        Label Label2;
         #endregion
     }
 }

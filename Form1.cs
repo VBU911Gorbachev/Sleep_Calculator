@@ -19,7 +19,7 @@ namespace Sleep_Calculator
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.BackColor = Color.Blue;
+            this.BackColor = Color.FromArgb(23, 43, 99);
             this.ForeColor = Color.White;
             this.Size = new Size(900, 900);
             this.CenterToScreen();
