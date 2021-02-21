@@ -22,13 +22,11 @@ namespace Sleep_Calculator
             //=============================================================
             ListBox1 = new ListBox();
             ListBox1.BackColor = Color.FromArgb(66, 82, 125);
-            ListBox1.Items.Add(ListBox1);
             ListBox1.Left = (this.ClientSize.Width - ListBox1.Width) / 2;
             ListBox1.Top = (this.ClientSize.Height - ListBox1.Height) / 2;
             //=============================================================
             ListBox2 = new ListBox();
             ListBox2.BackColor = Color.FromArgb(66, 82, 125);
-            ListBox2.Items.Add(ListBox2);
             ListBox2.Left = (this.ClientSize.Width - ListBox2.Width) / 2;
             ListBox2.Top = (this.ClientSize.Height - ListBox2.Height) / 2;
             //=============================================================
