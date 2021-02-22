@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Sleep_Calculator
@@ -20,51 +14,76 @@ namespace Sleep_Calculator
         private void Form1_Load(object sender, EventArgs e)
         {
             //=============================================================
-            ListBox1 = new ListBox();
-            ListBox1.Left = (this.ClientSize.Width - ListBox1.Width) / 2;
-            ListBox1.Top = (this.ClientSize.Height - ListBox1.Height) / 2;
+            hours = new ComboBox();
+            hours.BackColor = Color.FromArgb(23, 43, 99);
+            hours.Width = 80;
+            hours.Location = new Point(305, 300);
+            hours.ForeColor = Color.White;
             for (int i = 0; i < 24; i++)
             {
-                ListBox1.Items.Add(i);
+                hours.Items.Add(i);
             }
-            Controls.Add(ListBox1);
+            Controls.Add(hours);
             //=============================================================
-            ListBox2 = new ListBox();
-            ListBox2.BackColor = Color.FromArgb(66, 82, 125);
-            ListBox2.Left = (this.ClientSize.Width - ListBox2.Width) / 2;
-            ListBox2.Top = (this.ClientSize.Height - ListBox2.Height) / 2;
+            minutes = new ComboBox();
+            minutes.BackColor = Color.FromArgb(23, 43, 99);
+            minutes.Width = 80;
+            minutes.Location = new Point(485, 300);
+            minutes.ForeColor = Color.White;
             for (int i = 0; i < 60; i++)
             {
-                ListBox2.Items.Add(i);
+                minutes.Items.Add(i);
             }
-            Controls.Add(ListBox2);
+            Controls.Add(minutes);
             //=============================================================
-            btn1 = new Button();
-            btn1.Left = (this.ClientSize.Width - btn1.Width) / 2;
-            btn1.Top = (this.ClientSize.Height - btn1.Height) / 2;
-            btn1.BackColor = Color.FromArgb(93, 115, 176);
-            btn1.Text = "Рассчитать";
-            Controls.Add(btn1);
+            calc_btn = new Button();
+            calc_btn.Location = new Point(385, 400);
+            calc_btn.Size = new Size(100, 50);
+            calc_btn.BackColor = Color.FromArgb(58, 110, 252);
+            calc_btn.ForeColor = Color.White;
+            calc_btn.FlatStyle = FlatStyle.Flat;
+            calc_btn.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
+            calc_btn.Font = new Font("Gill Sans Ultra Bold", 10);
+            calc_btn.Text = "Рассчитать";
+            Controls.Add(calc_btn);
             //=============================================================
-            label1 = new Label();
-            label1.Left = (this.ClientSize.Width - label1.Width) / 2;
-            label1.Top = (this.ClientSize.Height - label1.Height) / 2;
-            label1.Text = "Время сна";
-            label1.ForeColor = Color.White;
-            Controls.Add(label1);
+            prog_name = new Label();
+            prog_name.Location = new Point(340, 200);
+            prog_name.Size = new Size(200, 100);
+            prog_name.Text = "КАЛЬКУЛЯТОР СНА";
+            prog_name.Font = new Font("Gill Sans Ultra Bold", 14);
+            prog_name.ForeColor = Color.White;
+            Controls.Add(prog_name);
             //=============================================================
-            Label2 = new Label();
-            Label2.Left = (this.ClientSize.Width - Label2.Width) / 2;
-            Label2.Top = (this.ClientSize.Height - Label2.Height) / 2;
-            Label2.Text = "Хочу проснуться в . . .";
-            Label2.ForeColor = Color.White;
-            Controls.Add(Label2);
+            description = new Label();
+            description.Location = new Point(20, 300);
+            description.Width = 500;
+            description.Font = new Font("Gill Sans Ultra Bold", 14);
+            description.Text = "Хочу проснуться в . . .";
+            description.ForeColor = Color.White;
+            Controls.Add(description);
+            //=============================================================
+            double_dotes = new Label();
+            double_dotes.Location = new Point(3, 300);
+            double_dotes.Size = new Size(50, 50);
+            double_dotes.Font = new Font("Gill Sans Ultra Bold", 10);
+            double_dotes.Text = ":";
+            double_dotes.ForeColor = Color.White;
+            Controls.Add(double_dotes);
+            //=============================================================
+            authors = new Label();
+            authors.Location = new Point(200, 100);
+            authors.Text = "Горбачёв Кирилл & Куваев Никита";
+            authors.ForeColor = Color.White;
+            Controls.Add(authors);
             //=============================================================
         }
-        ListBox ListBox1;
-        ListBox ListBox2;
-        Button btn1;
-        Label label1;
-        Label Label2;
+        ComboBox hours;
+        ComboBox minutes;
+        Button calc_btn;
+        Label prog_name;
+        Label description;
+        Label double_dotes;
+        Label authors;
     }
 }
