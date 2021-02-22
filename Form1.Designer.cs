@@ -1,4 +1,4 @@
-﻿using System.Windows.Forms;
+using System.Windows.Forms;
 using System.Drawing;
 namespace Sleep_Calculator
 {
@@ -41,10 +41,17 @@ namespace Sleep_Calculator
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "Калькулятор сна";
+            this.Text = "Калькулятор сна";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResumeLayout(false);
             this.BackColor = Color.FromArgb(23, 43, 99);
             this.ForeColor = Color.White;
             this.Size = new Size(900, 900);
-            this.CenterToScreen();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
         #endregion
     }
