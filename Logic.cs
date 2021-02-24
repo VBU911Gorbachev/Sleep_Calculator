@@ -98,7 +98,7 @@ namespace Sleep_Calculator
             if (sum_min_2 < 0)
             {
                 minus_res2 = sum_min_2 * -1;
-                result_2.Text = res1.ToString() + ":" + minus_res2.ToString();
+                result_2.Text = res2.ToString() + ":" + minus_res2.ToString();
             }
             //=============================================================
             // res3
@@ -122,7 +122,7 @@ namespace Sleep_Calculator
             if (sum_min_4 < 0)
             {
                 minus_res4 = sum_min_4 * -1;
-                result_4.Text = res1.ToString() + ":" + minus_res4.ToString();
+                result_4.Text = res4.ToString() + ":" + minus_res4.ToString();
             }
             //=============================================================
         }
