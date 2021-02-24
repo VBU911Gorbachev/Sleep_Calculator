@@ -10,9 +10,9 @@ namespace Sleep_Calculator
         public int sum_hour_3 = 0, sum_min_3 = 0;
         public int sum_hour_4 = 0, sum_min_4 = 0;
         public int res1 = 0;
-        public int res2 = 0;
+        public int res2 = 0, minus_res2 = 0;
         public int res3 = 0;
-        public int res4 = 0;
+        public int res4 = 0, minus_res4 = 0;
         public void Sleep_Hours(EventArgs e)
         {
             //=============================================================
@@ -95,6 +95,11 @@ namespace Sleep_Calculator
             {
                 result_2.Text = res2.ToString() + ": 0" + sum_min_2.ToString();
             }
+            if (sum_min_2 < 0)
+            {
+                minus_res2 = sum_min_2 * -1;
+                result_2.Text = res1.ToString() + ":" + minus_res2.ToString();
+            }
             //=============================================================
             // res3
             result_3.Text = res3.ToString() + ":" + sum_min_3.ToString();
@@ -113,6 +118,11 @@ namespace Sleep_Calculator
             if (sum_min_4 < 10 || sum_min_4 == 0)
             {
                 result_4.Text = res4.ToString() + ": 0" + sum_min_4.ToString();
+            }
+            if (sum_min_4 < 0)
+            {
+                minus_res4 = sum_min_4 * -1;
+                result_4.Text = res1.ToString() + ":" + minus_res4.ToString();
             }
             //=============================================================
         }
